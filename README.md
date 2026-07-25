@@ -76,10 +76,6 @@ docker compose up --build
 
 Install the optional stack with `pip install -e ".[training]"`, then run `lora-pipeline train`. The included default is a small model for accessibility; change `base_model` in `config/train.yaml` for a larger Llama or Mistral checkpoint. Training requires a compatible GPU and downloads model weights.
 
-## GitHub
-
-See [GITHUB_SETUP.md](GITHUB_SETUP.md) and [DAILY_COMMIT_PLAN.md](DAILY_COMMIT_PLAN.md).
-
 ## License
 
 [MIT](LICENSE)
