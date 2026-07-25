@@ -1,0 +1,272 @@
+[
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 0.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 1.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 2.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 3.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 4.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 5.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 6.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 7.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 8.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 9.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 10.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 11.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 12.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 13.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 14.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 15.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 16.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 17.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 18.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 19.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 20.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 21.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 22.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 23.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 24.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 25.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 26.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 27.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 28.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 29.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 30.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 31.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 32.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 33.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 34.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 35.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 36.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 37.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 38.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 39.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 40.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 41.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I was charged twice for invoice 42.",
+    "output": "Acknowledge the duplicate charge and explain that billing records will be checked.",
+    "category": "billing"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "I cannot log in to account 43.",
+    "output": "Acknowledge the access issue and request the next available verification step.",
+    "category": "account"
+  },
+  {
+    "instruction": "Write a concise, empathetic customer-support reply.",
+    "input": "The dashboard returns error 44.",
+    "output": "Acknowledge the error and request reproducible steps and environment details.",
+    "category": "technical"
+  }
+]

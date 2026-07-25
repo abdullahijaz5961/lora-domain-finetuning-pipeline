@@ -1,0 +1,28 @@
+[build-system]
+requires=["setuptools>=68","wheel"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="lora-domain-finetuning-pipeline"
+version="0.1.0"
+description="Reproducible dataset, QLoRA training, evaluation, and A/B serving"
+readme="README.md"
+requires-python=">=3.11"
+license={text="MIT"}
+dependencies=[
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.6",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev=["pytest>=8.0","httpx>=0.27"]
+dashboard=["streamlit>=1.36","pandas>=2.0"]
+training=["torch>=2.2","transformers>=4.44","datasets>=2.20","peft>=0.12","trl>=0.10","accelerate>=0.33","bitsandbytes>=0.43","mlflow>=2.14"]
+
+[project.scripts]
+lora-pipeline="lora_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+where=["src"]
