@@ -1,13 +1,16 @@
 <div align="center">
 
-# LoRA Domain Fine-Tuning Pipeline
+# 🧠 LoRA Domain Fine-Tuning Pipeline
 
-### Dataset curation, QLoRA configuration, evaluation, and A/B serving
+### Reproducible Data Preparation, QLoRA Training, Evaluation, and Adapter Serving
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=000000)](https://huggingface.co/)
+[![PEFT](https://img.shields.io/badge/PEFT-LoRA-FF6F00?style=for-the-badge)](https://huggingface.co/docs/peft/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Training-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-MIT-F7DF1E?style=for-the-badge)](LICENSE)
+
+**An end-to-end pipeline for adapting language models to domain-specific behaviour using LoRA and QLoRA.**
 
 </div>
 
@@ -15,67 +18,118 @@
 
 ## Overview
 
-Provides a reproducible domain-adaptation repository with 600 synthetic instruction examples, deterministic train/validation/test splits, a configurable PEFT/TRL QLoRA script, benchmark tooling, and an API that compares baseline and adapted behaviour.
+The LoRA Domain Fine-Tuning Pipeline covers the complete adaptation lifecycle:
 
-## Core capabilities
+- synthetic domain dataset generation;
+- schema and quality validation;
+- deterministic train, validation, and test splitting;
+- configurable LoRA or QLoRA training;
+- adapter-only checkpoint storage;
+- benchmark evaluation;
+- base-versus-adapted comparison;
+- A/B inference through a common serving interface.
 
-| Capability | Implementation |
-|---|---|
-| Dataset pipeline | Validation, deterministic splits, 600 examples, and a separate benchmark. |
-| LoRA configuration | Rank, alpha, dropout, target modules, epochs, and learning rate in YAML. |
-| Memory-efficient training | Optional 4-bit QLoRA through bitsandbytes. |
-| Reproducibility | Single config file and dry-run validation. |
-| Evaluation | Head-to-head benchmark and regression examples. |
-| Serving | FastAPI and Streamlit A/B comparison. |
+The project separates dataset quality, training configuration, evaluation, and serving so each stage remains reproducible and independently testable.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-R[Raw domain examples] --> V[Validation + dedup]
-V --> S[80/10/10 split]
-S --> T[QLoRA training]
-T --> A[LoRA adapter]
-B[Base model] --> E[Benchmark]
-A --> E
-E --> C[Head-to-head report]
-A --> API[A/B inference API]
+    D[Domain Examples] --> V[Data Validation]
+    V --> S[Train / Validation / Test Split]
+    S --> T[LoRA or QLoRA Training]
+
+    B[Base Model] --> T
+    T --> A[Adapter Checkpoint]
+
+    B --> E[Benchmark Evaluation]
+    A --> E
+    E --> C[Base vs Adapted Comparison]
+
+    B --> API[A/B Inference Service]
+    A --> API
 ```
 
-## Quick start on Windows
+## Core Capabilities
 
-```powershell
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -e ".[dev,dashboard]"
-Copy-Item .env.example .env
-pytest -q
-lora-pipeline validate
-lora-pipeline train --dry-run
-lora-pipeline serve
-```
+| Capability | Description |
+|---|---|
+| Dataset generation | Produces structured domain instruction-response examples |
+| Data validation | Detects malformed, duplicated, empty, or low-quality samples |
+| Deterministic splitting | Creates reproducible train, validation, and test partitions |
+| Configurable LoRA | Controls rank, alpha, dropout, and target modules |
+| QLoRA support | Enables four-bit base-model loading for reduced memory usage |
+| Adapter-only saving | Stores compact PEFT checkpoints instead of full model weights |
+| Benchmark separation | Keeps evaluation examples outside the training set |
+| Base-model comparison | Measures behaviour before and after adaptation |
+| Dry-run validation | Checks configuration and data without starting GPU training |
+| A/B serving | Exposes base and adapted models through one interface |
+| Training metadata | Preserves configuration and evaluation artefacts |
 
-API documentation: `http://localhost:8610/docs`
+## Fine-Tuning Flow
 
-## Docker
+| Stage | Output |
+|---|---|
+| Data preparation | Clean instruction-response dataset |
+| Validation | Quality report and accepted examples |
+| Splitting | Reproducible train, validation, and test files |
+| Quantised loading | Memory-efficient base model |
+| Adapter training | LoRA checkpoint |
+| Evaluation | Per-example and aggregate metrics |
+| Comparison | Base-versus-adapted performance report |
+| Serving | Unified inference API |
 
-```powershell
-Copy-Item .env.example .env
-docker compose up --build
-```
+## Engineering Highlights
 
-## Safety and data handling
+- Transformers model loading
+- PEFT LoRA adapters
+- Four-bit QLoRA configuration
+- TRL supervised fine-tuning
+- Configurable training YAML
+- Deterministic dataset processing
+- Separate benchmark dataset
+- Adapter-only persistence
+- Dry-run training validation
+- Base and tuned model comparison
+- FastAPI inference service
+- Automated data-quality tests
 
-- The default mode is offline and uses synthetic sample data.
-- Put provider keys only in `.env` or GitHub repository secrets.
-- Do not commit training checkpoints, production logs, private documents, or user data.
-- Run `pytest -q` before every push.
+## Technology Stack
 
-### Actual GPU training
+| Layer | Technology |
+|---|---|
+| Training | PyTorch and Transformers |
+| Parameter-efficient tuning | PEFT |
+| Trainer | TRL |
+| Quantisation | BitsAndBytes |
+| Data | Datasets and JSON |
+| Validation | Pydantic |
+| Serving | FastAPI |
+| Configuration | YAML |
+| Testing | Pytest |
 
-Install the optional stack with `pip install -e ".[training]"`, then run `lora-pipeline train`. The included default is a small model for accessibility; change `base_model` in `config/train.yaml` for a larger Llama or Mistral checkpoint. Training requires a compatible GPU and downloads model weights.
+## Design Principles
+
+1. Training data quality should be verified before GPU resources are used.
+2. Evaluation data must remain separate from training examples.
+3. Fine-tuning configuration should be reproducible and version-controlled.
+4. Adapter checkpoints should remain portable and compact.
+5. Base and adapted behaviour should be compared through the same interface.
+
+## Security
+
+- Training data must not contain unapproved personal or confidential information.
+- Model and dataset licences should be reviewed before use.
+- Checkpoints and datasets may reveal domain information and require access control.
+- Provider and model-hub credentials remain outside source control.
+- Production evaluation should include safety and privacy-specific test cases.
 
 ## License
 
-[MIT](LICENSE)
+This project is licensed under the [MIT License](LICENSE).
+
+<div align="center">
+
+**LoRA Domain Fine-Tuning — reproducible model adaptation without full-parameter training.**
+
+</div>
